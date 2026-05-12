@@ -54,3 +54,11 @@ class Library:
         self.members[member_id].borrowed_books.remove(isbn)
         self.books[isbn].borrow_date = None
         self.books[isbn].due_date = None
+    
+    def search(self, title: str | None = None, author: str | None = None) -> list[Book]:
+        """Searches for books by title and/or author."""
+        return [
+            book for book in self.books.values()
+            if (title and title.lower() in book.title.lower())
+            or (author and author.lower() in book.author.lower())
+        ]
