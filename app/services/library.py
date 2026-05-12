@@ -62,3 +62,11 @@ class Library:
             if (title and title.lower() in book.title.lower())
             or (author and author.lower() in book.author.lower())
         ]
+    
+    def list_overdue(self) -> list[Book]:
+        """Lists all overdue books."""
+        now = datetime.now()
+        return [
+            book for book in self.books.values()
+            if not book.available and book.due_date and book.due_date < now
+        ]
