@@ -4,3 +4,5 @@ __pycache__/
 data/library.json
 data/books.csv
 data/operations.log
+config.bat
+node_modules
