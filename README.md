@@ -171,18 +171,18 @@ python main.py
 
 Contains:
 
-| Field        | Type   |
-|--------------|--------|
-| title        | str    |
-| author       | str    |
-| isbn         | str    |
-| year         | int    |
-| available    | bool   |
+| Field     | Type |
+| --------- | ---- |
+| title     | str  |
+| author    | str  |
+| isbn      | str  |
+| year      | int  |
+| available | bool |
 
 Optional:
 
 | Field       | Type     |
-|-------------|----------|
+| ----------- | -------- |
 | borrow_date | datetime |
 | due_date    | datetime |
 
@@ -191,7 +191,7 @@ Optional:
 Contains:
 
 | Field          | Type      |
-|----------------|-----------|
+| -------------- | --------- |
 | id             | str       |
 | name           | str       |
 | email          | str       |
@@ -287,9 +287,3 @@ Run tests using:
 ```bash
 python -m unittest discover tests
 ```
-
----
-
-## Author
-
-Developed as a Python OOP and File Handling practice project.
