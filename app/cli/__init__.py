@@ -1,0 +1,1 @@
+from app.cli.menu import run_menu

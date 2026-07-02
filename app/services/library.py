@@ -15,7 +15,7 @@ class Library:
     def add_member(self, member: Member):
         self.members[member.id] = member
     
-    def borrow(self, member_id: str, isbn: str):
+    def borrow_book(self, member_id: str, isbn: str):
         """Allows a member to borrow a book if it's available."""
         # check member exists
         if member_id not in self.members:
@@ -55,7 +55,7 @@ class Library:
         self.books[isbn].borrow_date = None
         self.books[isbn].due_date = None
     
-    def search(self, title: str | None = None, author: str | None = None) -> list[Book]:
+    def search_book(self, title: str | None = None, author: str | None = None) -> list[Book]:
         """Searches for books by title and/or author."""
         return [
             book for book in self.books.values()
@@ -63,7 +63,7 @@ class Library:
             or (author and author.lower() in book.author.lower())
         ]
     
-    def list_overdue(self) -> list[Book]:
+    def list_overdue_books(self) -> list[Book]:
         """Lists all overdue books."""
         now = datetime.now()
         return [
